@@ -1,0 +1,75 @@
+Project Step 21.1:
+fun convert(digits: List<Int>) : Int {
+    return -1
+}
+
+fun speed(): Int {
+    return convert(digits)
+}
+
+
+Project Step 21.2:
+@Test
+fun convertTest() {
+    val list1 = mutableListOf<Int>(1)
+    Assert.assertEquals(1, convert(list1))
+
+    val list45 = mutableListOf<Int>(4,5)
+    Assert.assertEquals(45, convert(list45))
+
+    val list150 = mutableListOf<Int>(1, 5, 0)
+    Assert.assertEquals(150, convert(list150))
+}
+
+---- Solutions to Project Steps ----
+Project Step 21.1:
+package pfb.imaging
+
+import java.io.File
+
+fun convert(digits: List<Int>): Int {
+    return -1
+}
+
+class SpeedReader(signImageFile: File) {
+    val digits = mutableListOf<Int>()
+
+    init {
+
+    }
+
+    fun speed(): Int {
+        return convert(digits)
+    }
+}
+
+Project Step 21.3:
+fun convert(digits: List<Int>): Int {
+    var total = 0
+    var multiplier = 1
+    val n = digits.size
+    for (i in 0..n - 1) {
+        val digit = digits[n - i - 1]
+        total = total + digit * multiplier
+        multiplier = multiplier * 10
+    }
+    return total
+}
+
+
+Project Step 21.4:
+init {
+    val sign = loadPictureFromFile(signImageFile)
+    val digitImages = DigitFinder(sign).digits()
+    digitImages.forEach {
+        digitImage ->
+        val pictureSummary = PictureSummary(digitImage)
+        val digit = read(pictureSummary)
+        digits.add(digit)
+    }
+}
+
+
+
+
+
