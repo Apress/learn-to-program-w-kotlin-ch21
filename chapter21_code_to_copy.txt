@@ -47,7 +47,7 @@ package pfb.imaging
 
 import java.io.File
 
-fun convert(digits: List<Int>): Int {
+fun convertDigits(digits: List<Int>): Int {
     return -1
 }
 
@@ -59,7 +59,7 @@ class SpeedReader(signImageFile: File) {
     }
 
     fun speed(): Int {
-        return convert(digits)
+        return convertDigits(digits)
     }
 }
 
