@@ -1,5 +1,5 @@
 Project Step 21.1:
-fun convert(digits: List<Int>) : Int {
+fun convertDigits(digits: List<Int>) : Int {
     return -1
 }
 
@@ -12,7 +12,7 @@ package lpk.imaging
 
 import java.io.File
 
-fun convert(digits: List<Int>) : Int {
+fun convertDigits(digits: List<Int>) : Int {
     return -1
 }
 class SpeedReader(signImageFile : File) {
@@ -30,15 +30,15 @@ class SpeedReader(signImageFile : File) {
 
 Project Step 21.2:
 @Test
-fun convertTest() {
+fun convertDigitsTest() {
     val list1 = mutableListOf<Int>(1)
-    Assert.assertEquals(1, convert(list1))
+    Assert.assertEquals(1, convertDigits(list1))
 
     val list45 = mutableListOf<Int>(4,5)
-    Assert.assertEquals(45, convert(list45))
+    Assert.assertEquals(45, convertDigits(list45))
 
     val list150 = mutableListOf<Int>(1, 5, 0)
-    Assert.assertEquals(150, convert(list150))
+    Assert.assertEquals(150, convertDigits(list150))
 }
 
 ---- Solutions to Project Steps ----
@@ -64,7 +64,7 @@ class SpeedReader(signImageFile: File) {
 }
 
 Project Step 21.3:
-fun convert(digits: List<Int>): Int {
+fun convertDigits(digits: List<Int>): Int {
     var total = 0
     var multiplier = 1
     val n = digits.size
