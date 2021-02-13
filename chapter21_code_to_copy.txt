@@ -23,7 +23,7 @@ class SpeedReader(signImageFile : File) {
     }
 
     fun speed(): Int {
-        return convert(digits)
+        return convertDigits(digits)
     }
 }
 
