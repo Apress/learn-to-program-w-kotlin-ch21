@@ -4,7 +4,7 @@ fun convertDigits(digits: List<Int>) : Int {
 }
 
 fun speed(): Int {
-    return convert(digits)
+    return convertDigits(digits)
 }
 
 After this step, the file SpeedReader.kt should be:
