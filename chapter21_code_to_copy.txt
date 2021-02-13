@@ -7,6 +7,26 @@ fun speed(): Int {
     return convert(digits)
 }
 
+After this step, the file SpeedReader.kt should be:
+package lpk.imaging
+
+import java.io.File
+
+fun convert(digits: List<Int>) : Int {
+    return -1
+}
+class SpeedReader(signImageFile : File) {
+    val digits = mutableListOf<Int>()
+
+    init {
+
+    }
+
+    fun speed(): Int {
+        return convert(digits)
+    }
+}
+
 
 Project Step 21.2:
 @Test
